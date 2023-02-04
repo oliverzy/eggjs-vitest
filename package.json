@@ -1,0 +1,28 @@
+{
+  "name": "eggjs-vitest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=\"-r @esbuild-kit/cjs-loader ${NODE_OPTIONS}\" EGG_TYPESCRIPT=true EGG_SERVER_ENV=unittest vitest",
+    "patch": "patch-package",
+    "unpatch": "patch-package --reverse"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverzy/eggjs-vitest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliverzy/eggjs-vitest/issues"
+  },
+  "homepage": "https://github.com/oliverzy/eggjs-vitest#readme",
+  "dependencies": {
+    "egg": "^3.15.0",
+    "vitest": "^0.28.4",
+    "@vitest/coverage-c8": "^0.28.4",
+    "tsx": "^3.12.2",
+    "patch-package": "^6.5.1"
+  }
+}

@@ -1,0 +1,12 @@
+diff --git a/node_modules/vite-node/dist/source-map.mjs b/node_modules/vite-node/dist/source-map.mjs
+index 60edd6d..99933c7 100644
+--- a/node_modules/vite-node/dist/source-map.mjs
++++ b/node_modules/vite-node/dist/source-map.mjs
+@@ -32,6 +32,7 @@ function installSourcemapsSupport(options) {
+   install({
+     environment: "node",
+     handleUncaughtExceptions: false,
++    hookRequire: true,
+     retrieveSourceMap(source) {
+       const map = options.getSourceMap(source);
+       if (map) {

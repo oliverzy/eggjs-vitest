@@ -1,0 +1,19 @@
+diff --git a/node_modules/@vitest/coverage-c8/dist/provider-41412db4.js b/node_modules/@vitest/coverage-c8/dist/provider-41412db4.js
+index c80b8ea..4040e4e 100644
+--- a/node_modules/@vitest/coverage-c8/dist/provider-41412db4.js
++++ b/node_modules/@vitest/coverage-c8/dist/provider-41412db4.js
+@@ -180,11 +180,13 @@ class C8CoverageProvider {
+       };
+     }));
+     const offset = 185;
++    const originalGetSourceMap = report._getSourceMap;
+     report._getSourceMap = (coverage) => {
+       const path = _url.pathToFileURL(coverage.url.split("?")[0]).href;
+       const data = sourceMapMeta[path];
+       if (!data)
+-        return {};
++        return originalGetSourceMap.call(report, coverage);
++
+       return {
+         sourceMap: {
+           sourcemap: data.map
