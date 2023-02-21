@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_OPTIONS=\"-r @esbuild-kit/cjs-loader ${NODE_OPTIONS}\" EGG_TYPESCRIPT=true EGG_SERVER_ENV=unittest vitest",
+    "test": "NODE_OPTIONS=\"-r ts-node/register ${NODE_OPTIONS}\" EGG_TYPESCRIPT=true EGG_SERVER_ENV=unittest vitest",
     "patch": "patch-package",
     "unpatch": "patch-package --reverse"
   },
@@ -22,7 +22,7 @@
     "egg": "^3.15.0",
     "vitest": "^0.28.4",
     "@vitest/coverage-c8": "^0.28.4",
-    "tsx": "^3.12.2",
+    "ts-node": "^10.9.1",
     "patch-package": "^6.5.1"
   }
 }
